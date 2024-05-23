@@ -1,0 +1,18 @@
+n = int(input("Enter the number of integers: "))
+if n <= 0:
+    print("Invalid input")
+    exit()
+numbers = list(map(int, input(f"Enter {n} integers: ").split()))
+if len(numbers) != n:
+    print("Invalid input")
+    exit()
+largest = -1
+for num in numbers:
+    if num == int(num ** 0.5) ** 2:
+        continue
+    if num > largest:
+        largest = num
+if largest == -1:
+    print("No number is a perfect square")
+else:
+    print(f"The largest number that is not a perfect square: {largest}")
