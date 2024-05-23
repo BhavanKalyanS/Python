@@ -1,0 +1,30 @@
+n = int(input("Enter the size of the first array: "))
+
+if n <= 0:
+    print("Invalid input")
+    exit()
+
+arr1 = list(map(int, input(f"Enter {n} elements of the first array: ").split()))
+
+if len(arr1) != n:
+    print("Invalid input")
+    exit()
+
+m = int(input("Enter the size of the second array: "))
+
+if m <= 0:
+    print("Invalid input")
+    exit()
+arr2 = list(map(int, input(f"Enter {m} elements of the second array: ").split()))
+
+if len(arr2) != m:
+    print("Invalid input")
+    exit()
+
+max_element = max(arr1)
+
+min_element = min(arr2)
+
+product = max_element * min_element
+
+print(f"The product of the maximum element of the first array and the minimum element of the second array: {product}")
