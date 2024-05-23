@@ -1,0 +1,11 @@
+arr = []
+n = int(input("Enter the number of numbers to enter: "))
+for i in range(n):
+    num = float(input(f"Enter number {i+1}: "))
+    arr.append(num)
+mean = sum(arr) / n
+variance = sum((x - mean) ** 2 for x in arr) / n
+deviation = variance ** 0.5
+print(f"Mean: {mean}")
+print(f"Deviation: {deviation}")
+print(f"Variance: {variance}")
