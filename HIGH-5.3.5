@@ -1,0 +1,20 @@
+n = int(input("Enter the size of the array: "))
+
+if n <= 0:
+    print("Invalid input")
+    exit()
+
+arr = list(map(int, input(f"Enter {n} elements of the array: ").split()))
+if len(arr) != n:
+    print("Invalid input")
+    exit()
+
+count = 0
+
+for i in range(n):
+    if arr[i] != 0:
+        arr[i], arr[count] = arr[count], arr[i]
+        count += 1
+
+print("The array after moving all the 0's to the end:")
+print(arr)
