@@ -1,0 +1,22 @@
+n = int(input("Enter the size of the array: "))
+if n <= 0:
+    print("Invalid input")
+    exit()
+arr = list(map(int, input(f"Enter {n} array elements: ").split()))
+if len(arr) != n:
+    print("Invalid input")
+    exit()
+
+last_duplicate = -1
+last_index = -1
+
+for i in range(n - 1):
+    if arr[i] == arr[i + 1]:
+        last_duplicate = arr[i]
+        last_index = i
+
+if last_index == -1:
+    print("No such element found")
+else:
+    print(f"The last duplicate element: {last_duplicate}")
+    print(f"The index of the last duplicate element: {last_index}")
