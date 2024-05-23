@@ -1,0 +1,22 @@
+arr = []
+n = int(input("Enter the number of numbers to enter: "))
+for i in range(n):
+    num = float(input(f"Enter number {i+1}: "))
+    arr.append(num)
+print("Array:")
+for num in arr:
+    print(num, end=" ")
+print()
+num_to_insert = float(input("Enter a number to insert: "))
+pos_to_insert = int(input("Enter the position to insert at: "))
+arr.insert(pos_to_insert-1, num_to_insert)
+print("Array after insertion:")
+for num in arr:
+    print(num, end=" ")
+print()
+pos_to_delete = int(input("Enter the position to delete from: "))
+del arr[pos_to_delete-1]
+print("Array after deletion:")
+for num in arr:
+    print(num, end=" ")
+print()
