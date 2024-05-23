@@ -1,0 +1,17 @@
+n = int(input("Enter the size of the array: "))
+if n <= 0:
+    print("Invalid input")
+    exit()
+arr = list(map(int, input(f"Enter {n} array elements: ").split()))
+if len(arr) != n:
+    print("Invalid input")
+    exit()
+total = 0
+for i in range(2 ** n):
+    subset = []
+    for j in range(n):
+        if (i >> j) & 1:
+            subset.append(arr[j])
+    if subset:
+        total += 1
+print(f"The total number of subsets: {total}")
